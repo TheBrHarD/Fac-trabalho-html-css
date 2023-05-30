@@ -1,0 +1,18 @@
+﻿@model ProdutoEstoqueViewModel
+
+<div> <h2>Todos os Produtos</h2></div>
+<hr/>
+<h5>@ViewBag.Total @ViewBag.TotalProdutos</h5>
+<hr />
+
+
+<div class="container">
+
+    <div class="row">
+
+        @foreach (var produto in Model.Produtos)
+        {
+            <partial name="_ProdutosResumo" for="@produto"/> 
+        }
+    </div>
+</div>
